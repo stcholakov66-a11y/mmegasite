@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="bg" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MMEGA.NET — Професионални ИТ Услуги, Облачни Решения и Софтуерни Проекти</title>
+  <meta name="description" content="Официален уебсайт на www.mmega.net — Цялостни ИТ услуги, уеб разработка, системна администрация, облачни решения, киберсигурност и портфолио от активни проекти." />
+  <meta name="keywords" content="mmega.net, ИТ услуги, системна администрация, уеб разработка, софтуер по поръчка, облачни услуги, киберсигурност, ИТ поддръжка, DevOps" />
+  <link rel="canonical" href="https://www.mmega.net/" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.mmega.net/" />
+  <meta property="og:title" content="MMEGA.NET — Професионални ИТ Услуги & Софтуерни Проекти" />
+  <meta property="og:description" content="Уеб разработка, системна администрация, облачна инфраструктура, киберсигурност и директни връзки към нашите проекти." />
+  <meta property="og:site_name" content="www.mmega.net" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Structured Data (JSON-LD) for www.mmega.net -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ITService",
+    "name": "MMEGA.NET",
+    "url": "https://www.mmega.net",
+    "description": "Цялостни ИТ услуги, уеб разработка, системна администрация, облачни решения и киберсигурност.",
+    "email": "stoyan@mmega.net",
+    "knowsAbout": [
+      "Web Development",
+      "Custom Software Development",
+      "System Administration",
+      "Cloud Infrastructure & DevOps",
+      "Cybersecurity & Network Engineering",
+      "IT Consulting"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Skip to Main Content Link (WCAG 2.1 Keyboard Accessibility) -->
+  <a href="#main-content" class="skip-link" data-i18n="skipToContent">Към основното съдържание</a>
+
+  <!-- ========================================================================
+       ADMIN TOP BAR (Hidden from public, visible ONLY when stoyan@mmega.net logs in)
+       ======================================================================== -->
+  <div id="adminStatusBar" class="admin-status-bar" role="region" aria-label="Администраторски панел" data-admin-only hidden>
+    <div class="container admin-status-inner">
+      <div class="admin-badge-info">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+        <span data-i18n="adminLoggedInAs">Администраторски режим: stoyan@mmega.net</span>
+      </div>
+      <div class="admin-bar-actions">
+        <button type="button" class="btn-admin-bar" data-open-add-project data-i18n="btnAddProject">
+          + Добави проект
+        </button>
+        <button type="button" class="btn-admin-bar" data-open-data-modal data-i18n="btnExportImport">
+          JSON / Настройки
+        </button>
+        <button type="button" id="adminLogoutBtn" class="btn-admin-bar" data-i18n="adminLogoutBtn">
+          Изход
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SITE HEADER & NAVIGATION
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="https://www.mmega.net" class="brand-logo" aria-label="MMEGA.NET Начало">
+        <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <rect width="64" height="64" rx="16" fill="#0284c7" />
+          <path d="M14 44V20L24 34L32 22L40 34L50 20V44" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="50" cy="44" r="3" fill="#bae6fd" />
+          <circle cx="14" cy="44" r="3" fill="#bae6fd" />
+        </svg>
+        <div class="brand-text-wrap">
+          <span class="brand-domain">WWW.<span>MMEGA</span>.NET</span>
+          <span class="brand-sub">IT SERVICES &amp; SOLUTIONS</span>
+        </div>
+      </a>
+
+      <nav id="mainNav" class="main-nav" aria-label="Основна навигация">
+        <ul>
+          <li><a href="#services" class="nav-link" data-i18n="navServices">ИТ Услуги</a></li>
+          <li><a href="#projects" class="nav-link" data-i18n="navProjects">Проекти &amp; Линкове</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="navAbout">За нас</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="navContact">Контакти</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Quick Add Project Button (Strictly hidden from public; visible only to stoyan@mmega.net) -->
+        <button type="button" class="btn btn-primary" data-admin-only data-open-add-project data-i18n="btnAddProject" hidden>
+          + Добави проект
+        </button>
+
+        <!-- Language Switcher (BG / EN) -->
+        <button type="button" id="langSwitchBtn" class="btn btn-ghost" aria-label="Switch language to English">
+          EN
+        </button>
+
+        <!-- Accessibility (WCAG 2.1) Popover Menu -->
+        <div class="a11y-wrapper">
+          <button
+            type="button"
+            id="a11yMenuBtn"
+            class="btn btn-secondary"
+            aria-expanded="false"
+            aria-controls="a11yPanel"
+            aria-label="Настройки за достъпност (Accessibility)"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="4.5" r="2.5"></circle>
+              <path d="M4 9h16"></path>
+              <path d="M10 9l-2 11"></path>
+              <path d="M14 9l2 11"></path>
+              <path d="M12 9v5"></path>
+            </svg>
+            <span class="sr-only" data-i18n="a11yBtnLabel">Достъпност</span>
+          </button>
+
+          <div id="a11yPanel" class="a11y-panel" role="region" aria-labelledby="a11yPanelTitle" hidden>
+            <div class="a11y-panel-header">
+              <span id="a11yPanelTitle" class="a11y-panel-title" data-i18n="a11yTitle">
+                Настройки за достъпност (WCAG 2.1)
+              </span>
+            </div>
+
+            <div class="a11y-options">
+              <button type="button" id="a11yToggleTheme" class="a11y-toggle-btn" aria-pressed="false">
+                <span data-i18n="a11yTheme">Тъмна тема (Нощен режим)</span>
+                <span class="a11y-indicator" aria-hidden="true"></span>
+              </button>
+
+              <button type="button" id="a11yToggleContrast" class="a11y-toggle-btn" aria-pressed="false">
+                <span data-i18n="a11yContrast">Висок контраст</span>
+                <span class="a11y-indicator" aria-hidden="true"></span>
+              </button>
+
+              <button type="button" id="a11yToggleFont" class="a11y-toggle-btn" aria-pressed="false">
+                <span data-i18n="a11yFontSize">Увеличен шрифт</span>
+                <span class="a11y-indicator" aria-hidden="true"></span>
+              </button>
+
+              <button type="button" id="a11yToggleSpacing" class="a11y-toggle-btn" aria-pressed="false">
+                <span data-i18n="a11ySpacing">Разширено разстояние между текста</span>
+                <span class="a11y-indicator" aria-hidden="true"></span>
+              </button>
+
+              <button type="button" id="a11yToggleMotion" class="a11y-toggle-btn" aria-pressed="false">
+                <span data-i18n="a11yMotion">Намаляване на анимациите</span>
+                <span class="a11y-indicator" aria-hidden="true"></span>
+              </button>
+
+              <button type="button" id="a11yResetBtn" class="btn btn-ghost" style="width:100%; margin-top:4px;" data-i18n="a11yReset">
+                Нулиране на настройките
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button
+          type="button"
+          id="mobileMenuBtn"
+          class="mobile-menu-btn"
+          aria-expanded="false"
+          aria-controls="mainNav"
+          aria-label="Отвори менюто"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN CONTENT
+       ======================================================================== -->
+  <main id="main-content">
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section" aria-labelledby="heroHeading">
+      <div class="hero-bg-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div>
+          <div class="section-badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            <span data-i18n="heroBadge">Надежден технологичен партньор • www.mmega.net</span>
+          </div>
+
+          <h1 id="heroHeading" class="hero-title">
+            <span data-i18n="heroTitle1">Цялостни </span>
+            <span class="text-gradient" data-i18n="heroTitleAccent">ИТ Услуги, Облачни Решения</span>
+            <span data-i18n="heroTitle2"> и Софтуерна Инфраструктура</span>
+          </h1>
+
+          <p class="hero-subtitle" data-i18n="heroSubtitle">
+            Изграждаме, управляваме и защитаваме модерна дигитална инфраструктура. От уеб разработка и облачна архитектура до 24/7 системна администрация и киберсигурност.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary" data-i18n="heroCtaProjects">
+              Разгледай проектите
+            </a>
+            <a href="#services" class="btn btn-secondary" data-i18n="heroCtaServices">
+              Нашите ИТ услуги
+            </a>
+            <a href="#contact" class="btn btn-ghost" data-i18n="heroCtaContact">
+              Запитване за проект
+            </a>
+          </div>
+
+          <div class="hero-stats" role="list" aria-label="Ключови показатели">
+            <div class="stat-item" role="listitem">
+              <span class="stat-value">99.9%</span>
+              <span class="stat-label" data-i18n="statUptime">Гарантиран Uptime (SLA)</span>
+            </div>
+            <div class="stat-item" role="listitem">
+              <span id="statProjectCount" class="stat-value">5+</span>
+              <span class="stat-label" data-i18n="statProjects">Успешни ИТ проекти</span>
+            </div>
+            <div class="stat-item" role="listitem">
+              <span class="stat-value">24/7</span>
+              <span class="stat-label" data-i18n="statSupport">Мониторинг и поддръжка</span>
+            </div>
+            <div class="stat-item" role="listitem">
+              <span class="stat-value">WCAG 2.1</span>
+              <span class="stat-label" data-i18n="statAccessibility">Стандарти за достъпност</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Infrastructure Overview Card -->
+        <aside class="hero-visual-card" aria-label="Статус на ИТ услугите на MMEGA.NET">
+          <div class="terminal-header">
+            <div class="terminal-dots" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="terminal-title">status@mmega.net:~# systemctl status</span>
+          </div>
+
+          <div class="sys-status-list">
+            <div class="sys-status-item">
+              <div class="sys-status-left">
+                <div class="sys-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div class="sys-name">Web &amp; Software Engineering</div>
+                  <div class="sys-meta">Full-Stack • API • WCAG 2.1 AA</div>
+                </div>
+              </div>
+              <span class="sys-pill">ONLINE</span>
+            </div>
+
+            <div class="sys-status-item">
+              <div class="sys-status-left">
+                <div class="sys-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                  </svg>
+                </div>
+                <div>
+                  <div class="sys-name">Cloud &amp; Server Cluster</div>
+                  <div class="sys-meta">Linux / Windows • Docker • Backups</div>
+                </div>
+              </div>
+              <span class="sys-pill">99.98% SLA</span>
+            </div>
+
+            <div class="sys-status-item">
+              <div class="sys-status-left">
+                <div class="sys-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="sys-name">Cybersecurity &amp; Zero-Trust VPN</div>
+                  <div class="sys-meta">Firewall • SIEM • DDoS Shield</div>
+                </div>
+              </div>
+              <span class="sys-pill">PROTECTED</span>
+            </div>
+
+            <div class="sys-status-item">
+              <div class="sys-status-left">
+                <div class="sys-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                </div>
+                <div>
+                  <div class="sys-name">Google Analytics 4 &amp; Telemetry</div>
+                  <div class="sys-meta">Real-Time Event &amp; Link Tracking</div>
+                </div>
+              </div>
+              <span class="sys-pill">ACTIVE</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 2. IT SERVICES SECTION -->
+    <section id="services" class="section section-alt" aria-labelledby="servicesHeading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="servicesBadge">Какво предлагаме</div>
+          <h2 id="servicesHeading" class="section-title" data-i18n="servicesTitle">
+            Професионални ИТ услуги за вашия бизнес
+          </h2>
+          <p class="section-subtitle" data-i18n="servicesSubtitle">
+            Пълен спектър от технологични услуги – от концепция и разработка до денонощна поддръжка и защита на критични системи.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1: Web & Custom Software -->
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="service-title" data-i18n="srv1Title">Уеб разработка и софтуер по поръчка</h3>
+            <p class="service-desc" data-i18n="srv1Desc">
+              Създаване на бързи, достъпни (WCAG 2.1) и сигурни уеб сайтове, корпоративни портали, ERP/CRM системи и API интеграции.
+            </p>
+            <ul class="service-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="srv1Item1">Модерни уеб приложения (SPA / SSR / Статични и динамични сайтове)</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="srv1Item2">Корпоративни системи, клиентски портали и електронна търговия (B2B/B2C)</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="srv1Item3">API разработка и интеграция със съществуващ софтуер</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Service 2: SysAdmin, Cloud & DevOps -->
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+              </svg>
+            </div>
+            <h3 class="service-title" data-i18n="srv2Title">Системна администрация, Cloud &amp; DevOps</h3>
+            <p class="service-desc" data-i18n="srv2Desc">
+              Проектиране, миграция и управление на Linux/Windows сървъри, виртуализация, контейнеризация и облачни среди.
+            </p>
+            <ul class="service-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="srv2Item1">Linux &amp; Windows Server администрация, Proxmox, VMware</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="srv2Item2">Docker, Kubernetes, CI/CD автоматизация и облачна инфраструктура</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="srv2Item3">Автоматизирани архиви (Backups), Disaster Recovery и 24/7 мониторинг</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Service 3: IT Support, Networks & Cybersecurity -->
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="service-title" data-i18n="srv3Title">ИТ поддръжка, мрежи и киберсигурност</h3>
+            <p class="service-desc" data-i18n="srv3Desc">
+              Корпоративна абонаментна ИТ поддръжка, изграждане на сигурни мрежи, VPN свързаност и защита от киберзаплахи.
+            </p>
+            <ul class="service-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="srv3Item1">Проектиране на LAN/WAN мрежи, защитни стени (Firewalls) и Zero-Trust VPN</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="srv3Item2">Одит на сигурността, защита от DDoS/Ransomware и внедряване на политики</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="srv3Item3">Дистанционна и локална поддръжка на работни станции и периферия</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Service 4: IT Consulting & Digital Transformation -->
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+            </div>
+            <h3 class="service-title" data-i18n="srv4Title">ИТ консултации и дигитална трансформация</h3>
+            <p class="service-desc" data-i18n="srv4Desc">
+              Стратегическо технологично планиране, оптимизация на ИТ разходите и внедряване на иновативни бизнес процеси.
+            </p>
+            <ul class="service-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="srv4Item1">Технологичен одит и архитектурно планиране за растеж</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="srv4Item2">Автоматизация на бизнес процеси и внедряване на облачни платформи</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="srv4Item3">Обучение на екипи и консултации по информационна сигурност и GDPR</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PROJECTS & EXISTING LINKS PORTFOLIO SECTION -->
+    <section id="projects" class="section" aria-labelledby="projectsHeading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="projectsBadge">Портфолио &amp; Активни системи</div>
+          <h2 id="projectsHeading" class="section-title" data-i18n="projectsTitle">
+            Нашите проекти и директни връзки
+          </h2>
+          <p class="section-subtitle" data-i18n="projectsSubtitle">
+            Разгледайте реализираните от нас системи, корпоративни портали, облачни решения и активни уеб проекти.
+          </p>
+        </div>
+
+        <!-- Projects Filter & Search Toolbar (Admin actions hidden from public) -->
+        <div class="projects-toolbar" role="region" aria-label="Филтриране на проекти">
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <label for="projectSearchInput" class="sr-only">Търсене на проекти</label>
+            <input
+              type="search"
+              id="projectSearchInput"
+              class="search-input"
+              placeholder="Търсене по име, домейн или технология..."
+              data-i18n-placeholder="searchPlaceholder"
+            />
+          </div>
+
+          <div class="filter-tabs" role="tablist" aria-label="Категории проекти">
+            <button type="button" class="filter-btn active" role="tab" aria-selected="true" data-filter="all" data-i18n="filterAll">
+              Всички
+            </button>
+            <button type="button" class="filter-btn" role="tab" aria-selected="false" data-filter="web" data-i18n="filterWeb">
+              Уеб &amp; Софтуер
+            </button>
+            <button type="button" class="filter-btn" role="tab" aria-selected="false" data-filter="cloud" data-i18n="filterCloud">
+              Cloud &amp; Сървъри
+            </button>
+            <button type="button" class="filter-btn" role="tab" aria-selected="false" data-filter="security" data-i18n="filterSecurity">
+              Сигурност &amp; Мрежи
+            </button>
+            <button type="button" class="filter-btn" role="tab" aria-selected="false" data-filter="consulting" data-i18n="filterConsulting">
+              Портали &amp; ИТ Услуги
+            </button>
+          </div>
+
+          <!-- Admin-Only Actions Bar (Only visible when stoyan@mmega.net is authenticated) -->
+          <div class="projects-actions-bar" data-admin-only hidden>
+            <button type="button" class="btn btn-primary" data-open-add-project data-i18n="btnAddProject">
+              + Добави проект
+            </button>
+            <button type="button" class="btn btn-secondary" data-open-data-modal data-i18n="btnExportImport">
+              JSON / Настройки
+            </button>
+          </div>
+        </div>
+
+        <!-- Projects Cards Grid (Dynamic) -->
+        <div id="projectsGrid" class="projects-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- 4. WHY MMEGA.NET SECTION -->
+    <section id="about" class="section section-alt" aria-labelledby="whyHeading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="whyBadge">Защо www.mmega.net</div>
+          <h2 id="whyHeading" class="section-title" data-i18n="whyTitle">
+            Технологично превъзходство, сигурност и достъпност
+          </h2>
+          <p class="section-subtitle" data-i18n="whySubtitle">
+            Всеки наш проект се изгражда със стриктно внимание към производителността, защитата на данните и универсалната достъпност.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <span class="why-number">01 / SECURITY</span>
+            <h3 data-i18n="why1Title">Сигурност на първо място</h3>
+            <p data-i18n="why1Desc">
+              Криптирана комуникация, редовни одити на сигурността, многофакторна защита и надеждни резервни копия.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <span class="why-number">02 / SPEED</span>
+            <h3 data-i18n="why2Title">Висока производителност</h3>
+            <p data-i18n="why2Desc">
+              Оптимизиран код и сървърна архитектура за мигновено зареждане и безупречна работа при високо натоварване.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <span class="why-number">03 / WCAG 2.1</span>
+            <h3 data-i18n="why3Title">Пълна достъпност (WCAG 2.1)</h3>
+            <p data-i18n="why3Desc">
+              Интерфейси, проектирани за всички потребители – пълна клавиатурна навигация, екранни четци и висок контраст.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <span class="why-number">04 / ANALYTICS</span>
+            <h3 data-i18n="why4Title">Мониторинг и анализи</h3>
+            <p data-i18n="why4Desc">
+              Вградена интеграция с Google Analytics 4 (GA4) и централизиран контрол върху проектите.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CONTACT SECTION -->
+    <section id="contact" class="section" aria-labelledby="contactHeading">
+      <div class="container contact-grid">
+        <div>
+          <div class="section-badge" data-i18n="contactBadge">Свържете се с нас</div>
+          <h2 id="contactHeading" class="section-title" data-i18n="contactTitle">
+            Готови ли сте да стартираме следващия ви ИТ проект?
+          </h2>
+          <p class="section-subtitle" data-i18n="contactSubtitle">
+            Изпратете ни запитване за ИТ услуги, поддръжка или разработка на софтуер. Нашият екип ще се свърже с вас възможно най-бързо.
+          </p>
+
+          <div class="contact-info-cards">
+            <div class="info-card">
+              <div class="info-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="info-label" data-i18n="contactInfoDomain">Официален уебсайт</div>
+                <a href="https://www.mmega.net" class="info-value">https://www.mmega.net</a>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="info-label" data-i18n="contactInfoEmail">Имейл за връзка</div>
+                <a href="mailto:stoyan@mmega.net" class="info-value">stoyan@mmega.net</a>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="info-label" data-i18n="contactInfoHours">Работно време и SLA</div>
+                <div class="info-value" data-i18n="contactInfoHoursVal">Пон–Пет: 09:00 – 18:00 (24/7 SLA Мониторинг)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-card">
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName" class="form-label" data-i18n="formName">Вашето име или компания *</label>
+                <input
+                  type="text"
+                  id="contactName"
+                  class="form-control"
+                  required
+                  placeholder="Иван Петров / Фирма ООД"
+                  data-i18n-placeholder="formNamePlaceholder"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail" class="form-label" data-i18n="formEmail">Имейл адрес *</label>
+                <input
+                  type="email"
+                  id="contactEmail"
+                  class="form-control"
+                  required
+                  placeholder="name@company.com"
+                  data-i18n-placeholder="formEmailPlaceholder"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactService" class="form-label" data-i18n="formService">Изберете услуга</label>
+              <select id="contactService" class="form-control">
+                <option value="Web & Custom Software" data-i18n="formServiceOpt1">Уеб разработка и софтуер</option>
+                <option value="SysAdmin / Cloud / DevOps" data-i18n="formServiceOpt2">Системна администрация / Cloud / DevOps</option>
+                <option value="IT Support & Cybersecurity" data-i18n="formServiceOpt3">ИТ поддръжка, мрежи и киберсигурност</option>
+                <option value="IT Consulting" data-i18n="formServiceOpt4">ИТ консултации и одит</option>
+                <option value="Other" data-i18n="formServiceOpt5">Друго запитване</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage" class="form-label" data-i18n="formMessage">Описание на проекта или запитването *</label>
+              <textarea
+                id="contactMessage"
+                class="form-control"
+                required
+                placeholder="Опишете накратко вашите нужди, цели или съществуваща инфраструктура..."
+                data-i18n-placeholder="formMessagePlaceholder"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;" data-i18n="formSubmit">
+              Изпрати запитване
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="https://www.mmega.net" class="brand-logo">
+          <div class="brand-text-wrap">
+            <span class="brand-domain">WWW.<span>MMEGA</span>.NET</span>
+            <span class="brand-sub">ENTERPRISE IT SERVICES &amp; PORTFOLIO</span>
+          </div>
+        </a>
+
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="#services" class="nav-link" data-i18n="navServices">ИТ Услуги</a>
+          <a href="#projects" class="nav-link" data-i18n="navProjects">Проекти &amp; Линкове</a>
+          <a href="#about" class="nav-link" data-i18n="navAbout">За нас</a>
+          <a href="#contact" class="nav-link" data-i18n="navContact">Контакти</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="currentYear">2026</span> <strong>www.mmega.net</strong>.
+          <span data-i18n="footerRights">Всички права запазени.</span>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+          <span data-i18n="footerA11yNote">
+            Проектиран според стандартите за достъпност WCAG 2.1 AA.
+          </span>
+          <!-- Discreet Admin Login Trigger for stoyan@mmega.net -->
+          <button type="button" id="footerAdminLoginBtn" class="admin-footer-trigger" aria-label="Администраторски вход за stoyan@mmega.net">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <span data-i18n="footerAdminBtn">Админ вход</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MODAL 0: ADMIN LOGIN (Strictly for stoyan@mmega.net)
+       ======================================================================== -->
+  <div
+    id="adminLoginModal"
+    class="modal-backdrop"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="adminLoginModalTitle"
+    hidden
+  >
+    <div class="modal-dialog modal-dialog-sm">
+      <div class="modal-header">
+        <h2 id="adminLoginModalTitle" class="modal-title" data-i18n="adminLoginTitle">Администраторски вход</h2>
+        <button type="button" class="modal-close-btn" data-close-admin-login aria-label="Затвори">✕</button>
+      </div>
+
+      <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:20px;" data-i18n="adminLoginSubtitle">
+        Управлението и добавянето на проекти е разрешено единствено за stoyan@mmega.net.
+      </p>
+
+      <form id="adminLoginForm">
+        <div class="form-group">
+          <label for="adminEmailInput" class="form-label" data-i18n="adminEmailLabel">Администраторски имейл *</label>
+          <input
+            type="email"
+            id="adminEmailInput"
+            class="form-control"
+            required
+            autocomplete="username"
+            placeholder="stoyan@mmega.net"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="adminPasswordInput" class="form-label" data-i18n="adminPassLabel">Парола за достъп *</label>
+          <input
+            type="password"
+            id="adminPasswordInput"
+            class="form-control"
+            required
+            autocomplete="current-password"
+            placeholder="••••••••••••"
+          />
+        </div>
+
+        <div id="adminLoginError" class="form-error-msg" role="alert" hidden></div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ghost" data-close-admin-login data-i18n="btnCancel">Отказ</button>
+          <button type="submit" class="btn btn-primary" data-i18n="adminLoginSubmit">Вход като администратор</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 1: ADD / EDIT PROJECT (Only accessible by stoyan@mmega.net)
+       ======================================================================== -->
+  <div
+    id="projectModal"
+    class="modal-backdrop"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="projectModalTitle"
+    hidden
+  >
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2 id="projectModalTitle" class="modal-title" data-i18n="modalAddTitle">Добавяне на проект (линк)</h2>
+        <button type="button" class="modal-close-btn" data-close-project-modal aria-label="Затвори">✕</button>
+      </div>
+
+      <form id="projectForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="projTitleBg" class="form-label" data-i18n="fieldTitleBg">Име на проекта (Български) *</label>
+            <input type="text" id="projTitleBg" class="form-control" required placeholder="напр. Корпоративен Портал" />
+          </div>
+          <div class="form-group">
+            <label for="projTitleEn" class="form-label" data-i18n="fieldTitleEn">Име на проекта (Английски)</label>
+            <input type="text" id="projTitleEn" class="form-control" placeholder="e.g. Enterprise Portal" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="projUrl" class="form-label" data-i18n="fieldUrl">Уеб адрес / Линк (URL) *</label>
+          <input type="text" id="projUrl" class="form-control" required placeholder="https://project.mmega.net" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="projCategory" class="form-label" data-i18n="fieldCategory">Категория *</label>
+            <select id="projCategory" class="form-control">
+              <option value="web" data-i18n="filterWeb">Уеб &amp; Софтуер</option>
+              <option value="cloud" data-i18n="filterCloud">Cloud &amp; Сървъри</option>
+              <option value="security" data-i18n="filterSecurity">Сигурност &amp; Мрежи</option>
+              <option value="consulting" data-i18n="filterConsulting">Портали &amp; ИТ Услуги</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="projStatus" class="form-label" data-i18n="fieldStatus">Статус</label>
+            <select id="projStatus" class="form-control">
+              <option value="live" data-i18n="statusLive">Активен</option>
+              <option value="maintenance" data-i18n="statusMaintenance">В разработка / Тест</option>
+              <option value="internal" data-i18n="statusInternal">Корпоративен</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="projDescBg" class="form-label" data-i18n="fieldDescBg">Кратко описание (Български) *</label>
+          <textarea id="projDescBg" class="form-control" required placeholder="Опишете проекта, използваните технологии и предназначението му..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="projDescEn" class="form-label" data-i18n="fieldDescEn">Кратко описание (Английски)</label>
+          <textarea id="projDescEn" class="form-control" placeholder="Optional description in English..."></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="projTags" class="form-label" data-i18n="fieldTags">Технологии / Етикети (разделени със запетая)</label>
+            <input type="text" id="projTags" class="form-control" placeholder="React, Linux, Docker, PostgreSQL" />
+          </div>
+
+          <div class="form-group">
+            <label for="projAccent" class="form-label" data-i18n="fieldAccent">Акцентен цвят на картата</label>
+            <input type="color" id="projAccent" class="form-control" value="#0284c7" style="height:44px; padding:4px;" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="projImage" class="form-label" data-i18n="fieldImage">URL на изображение / лого (по избор)</label>
+          <input type="url" id="projImage" class="form-control" placeholder="https://www.mmega.net/assets/preview.png" />
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-row">
+            <input type="checkbox" id="projFeatured" />
+            <span data-i18n="fieldFeatured">Отбележи като водещ проект (Featured)</span>
+          </label>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ghost" data-close-project-modal data-i18n="btnCancel">Отказ</button>
+          <button type="submit" class="btn btn-primary" data-i18n="btnSaveProject">Запази проекта</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 2: JSON EXPORT/IMPORT, PASSWORD & GOOGLE ANALYTICS 4 SETTINGS
+       ======================================================================== -->
+  <div
+    id="dataSettingsModal"
+    class="modal-backdrop"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="dataModalTitle"
+    hidden
+  >
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2 id="dataModalTitle" class="modal-title" data-i18n="dataModalTitle">
+          Управление на проекти (JSON), Парола &amp; Google Analytics
+        </h2>
+        <button type="button" class="modal-close-btn" data-close-data-modal aria-label="Затвори">✕</button>
+      </div>
+
+      <p style="color:var(--text-secondary); font-size:0.93rem; margin-bottom:20px;" data-i18n="dataModalDesc">
+        Всички промени по проектите се запазват автоматично във вашия браузър. За да ги направите постоянни за всички посетители на www.mmega.net, изтеглете файла projects.json и го качете в папка /data/projects.json на хостинга.
+      </p>
+
+      <div style="display:flex; flex-wrap:wrap; gap:12px; margin-bottom:24px;">
+        <button type="button" id="btnExportJson" class="btn btn-primary" data-i18n="btnDownloadJson">
+          Изтегли projects.json
+        </button>
+
+        <button type="button" id="btnImportJson" class="btn btn-secondary" data-i18n="btnUploadJson">
+          Зареди от JSON файл
+        </button>
+        <input type="file" id="jsonFileInput" accept=".json,application/json" hidden />
+
+        <button type="button" id="btnResetDefaultProjects" class="btn btn-danger" data-i18n="btnResetDefault">
+          Възстанови фабричните проекти
+        </button>
+      </div>
+
+      <hr style="border:0; border-top:1px solid var(--border-color); margin-bottom:20px;" />
+
+      <h3 style="font-size:1.05rem; margin-bottom:8px;" data-i18n="gaConfigTitle">
+        Настройка на Google Analytics 4 (GA4)
+      </h3>
+      <p style="color:var(--text-secondary); font-size:0.88rem; margin-bottom:14px;" data-i18n="gaConfigDesc">
+        Въведете вашия GA4 Measurement ID (напр. G-XXXXXXXXXX), за да активирате отчитането на трафика и кликовете върху проектите.
+      </p>
+
+      <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:24px;">
+        <label for="gaMeasurementIdInput" class="sr-only">GA4 Measurement ID</label>
+        <input
+          type="text"
+          id="gaMeasurementIdInput"
+          class="form-control"
+          style="max-width:260px; font-family:var(--font-mono);"
+          placeholder="G-XXXXXXXXXX"
+        />
+        <button type="button" id="btnSaveGaId" class="btn btn-secondary" data-i18n="btnSaveGa">
+          Запази GA4 ID
+        </button>
+      </div>
+
+      <hr style="border:0; border-top:1px solid var(--border-color); margin-bottom:20px;" />
+
+      <h3 style="font-size:1.05rem; margin-bottom:10px;" data-i18n="adminPassChangeTitle">
+        Смяна на парола за stoyan@mmega.net
+      </h3>
+      <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+        <label for="newAdminPassInput" class="sr-only">Нова парола за stoyan@mmega.net</label>
+        <input
+          type="password"
+          id="newAdminPassInput"
+          class="form-control"
+          style="max-width:260px;"
+          placeholder="Нова парола..."
+        />
+        <button type="button" id="btnSaveNewPass" class="btn btn-secondary" data-i18n="btnSaveNewPass">
+          Обнови паролата
+        </button>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-ghost" data-close-data-modal>Затвори</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       GDPR / GOOGLE ANALYTICS COOKIE BANNER
+       ======================================================================== -->
+  <aside id="cookieBanner" class="cookie-banner" role="region" aria-label="Съгласие за бисквитки и Google Analytics" hidden>
+    <p class="cookie-text" data-i18n="cookieText">
+      Този уебсайт (www.mmega.net) използва бисквитки и Google Analytics 4 за анализ на трафика и подобряване на потребителското изживяване.
+    </p>
+    <div class="cookie-actions">
+      <button type="button" id="cookieDeclineBtn" class="btn btn-ghost" data-i18n="cookieDecline">
+        Само необходими
+      </button>
+      <button type="button" id="cookieAcceptBtn" class="btn btn-primary" data-i18n="cookieAccept">
+        Приемам всички
+      </button>
+    </div>
+  </aside>
+
+  <!-- Live Toast Container for Screen Readers & Visual Feedback -->
+  <div id="toastContainer" class="toast-container" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
