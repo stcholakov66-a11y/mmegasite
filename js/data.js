@@ -127,6 +127,15 @@ window.MMEGA_I18N = {
     statSupport: "Мониторинг и поддръжка",
     statAccessibility: "Стандарти за достъпност",
 
+    bentoBadge: "ЕКОСИСТЕМА МИКРО МЕГА",
+    bentoMainTitle: "Модерни Бизнес Приложения & Облачна Архитектура",
+    bentoMainDesc: "Интегрирани уеб платформи, електронно фактуриране, ERP решения и надеждна сървърна инфраструктура за вашия бизнес.",
+    bentoInvoicesTitle: "Фактури | Микро Мега",
+    bentoSub1Title: "Сигурност & Защита",
+    bentoSub1Desc: "Zero-Trust мрежи, VPN и автоматизирани архиви",
+    bentoSub2Title: "Софтуер по поръчка",
+    bentoSub2Desc: "Уеб системи, клиентски портали и API интеграции",
+
     servicesBadge: "Какво предлагаме",
     servicesTitle: "Професионални ИТ услуги за вашия бизнес",
     servicesSubtitle: "Пълен спектър от технологични услуги – от концепция и разработка до денонощна поддръжка и защита на критични системи.",
@@ -292,6 +301,15 @@ window.MMEGA_I18N = {
     statProjects: "Delivered IT Projects",
     statSupport: "Monitoring & Support",
     statAccessibility: "Accessibility Standard",
+
+    bentoBadge: "MICRO MEGA ECOSYSTEM",
+    bentoMainTitle: "Modern Business Applications & Cloud Architecture",
+    bentoMainDesc: "Integrated web platforms, electronic invoicing, ERP solutions, and resilient server infrastructure for your enterprise.",
+    bentoInvoicesTitle: "Invoices | Micro Mega",
+    bentoSub1Title: "Security & Protection",
+    bentoSub1Desc: "Zero-Trust networks, VPN, and automated backups",
+    bentoSub2Title: "Custom Software",
+    bentoSub2Desc: "Web platforms, client portals, and API integrations",
 
     servicesBadge: "What We Do",
     servicesTitle: "Enterprise-Grade IT Services for Your Business",

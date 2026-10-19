@@ -247,80 +247,98 @@
           </div>
         </div>
 
-        <!-- Live Infrastructure Overview Card -->
-        <aside class="hero-visual-card" aria-label="Статус на ИТ услугите на MMEGA.NET">
-          <div class="terminal-header">
-            <div class="terminal-dots" aria-hidden="true">
-              <span></span><span></span><span></span>
+        <!-- Modern Micro Mega Bento Showcase -->
+        <aside class="hero-bento-showcase" aria-label="Дигитална екосистема на Микро Мега">
+          <!-- Featured Top Card: Cloud & Web Ecosystem -->
+          <div class="bento-hero-main">
+            <div class="bento-hero-top">
+              <span class="bento-tag" data-i18n="bentoBadge">ЕКОСИСТЕМА МИКРО МЕГА</span>
+              <span class="bento-live-dot" aria-hidden="true"></span>
             </div>
-            <span class="terminal-title">status@mmega.net:~# systemctl status</span>
+
+            <!-- Architectural Vector Graphic in #393185 Brand Blue -->
+            <div class="bento-graphic-wrap" aria-hidden="true">
+              <svg viewBox="0 0 380 150" fill="none" class="bento-svg-illustration">
+                <defs>
+                  <linearGradient id="mmegaBrandGrad" x1="0" y1="0" x2="380" y2="150" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#393185" />
+                    <stop offset="100%" stop-color="#4f46e5" />
+                  </linearGradient>
+                  <linearGradient id="mmegaSoftFill" x1="0" y1="0" x2="0" y2="150" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#393185" stop-opacity="0.16" />
+                    <stop offset="100%" stop-color="#393185" stop-opacity="0.0" />
+                  </linearGradient>
+                </defs>
+                <!-- Subtle Grid Lines -->
+                <line x1="20" y1="35" x2="360" y2="35" stroke="#e2e8f0" stroke-dasharray="4 4" />
+                <line x1="20" y1="75" x2="360" y2="75" stroke="#e2e8f0" stroke-dasharray="4 4" />
+                <line x1="20" y1="115" x2="360" y2="115" stroke="#e2e8f0" stroke-dasharray="4 4" />
+
+                <!-- Smooth Performance Wave -->
+                <path d="M20 115 C80 110, 110 55, 170 65 C230 75, 260 28, 360 22 L360 135 L20 135 Z" fill="url(#mmegaSoftFill)" />
+                <path d="M20 115 C80 110, 110 55, 170 65 C230 75, 260 28, 360 22" stroke="url(#mmegaBrandGrad)" stroke-width="3.5" stroke-linecap="round" />
+
+                <!-- Connected Nodes -->
+                <circle cx="95" cy="84" r="6" fill="#ffffff" stroke="#393185" stroke-width="3" />
+                <circle cx="170" cy="65" r="6" fill="#ffffff" stroke="#393185" stroke-width="3" />
+                <circle cx="265" cy="42" r="6" fill="#ffffff" stroke="#393185" stroke-width="3" />
+                <circle cx="345" cy="24" r="7" fill="#393185" />
+
+                <!-- Floating Metric Pill inside SVG -->
+                <rect x="215" y="76" width="138" height="44" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+                <circle cx="235" cy="98" r="8" fill="#393185" fill-opacity="0.12" />
+                <path d="M232 98L234.5 100.5L239 95.5" stroke="#393185" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <text x="250" y="95" fill="#0f172a" font-size="11" font-weight="700" font-family="Inter, sans-serif">Cloud &amp; ERP</text>
+                <text x="250" y="109" fill="#64748b" font-size="9.5" font-weight="600" font-family="JetBrains Mono, monospace">mmega.net</text>
+              </svg>
+            </div>
+
+            <h3 class="bento-hero-title" data-i18n="bentoMainTitle">
+              Модерни Бизнес Приложения &amp; Облачна Архитектура
+            </h3>
+            <p class="bento-hero-desc" data-i18n="bentoMainDesc">
+              Интегрирани уеб платформи, електронно фактуриране, ERP решения и надеждна сървърна инфраструктура за вашия бизнес.
+            </p>
+
+            <a
+              href="https://invoicesnew.mmega.net/dashboard"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bento-featured-link"
+            >
+              <div class="bento-featured-link-left">
+                <img src="assets/favicon.svg" alt="" width="28" height="28" aria-hidden="true" />
+                <div>
+                  <div class="bento-featured-name" data-i18n="bentoInvoicesTitle">Фактури | Микро Мега</div>
+                  <div class="bento-featured-url">invoicesnew.mmega.net</div>
+                </div>
+              </div>
+              <span class="bento-featured-arrow" aria-hidden="true">→</span>
+            </a>
           </div>
 
-          <div class="sys-status-list">
-            <div class="sys-status-item">
-              <div class="sys-status-left">
-                <div class="sys-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="16 18 22 12 16 6"></polyline>
-                    <polyline points="8 6 2 12 8 18"></polyline>
-                  </svg>
-                </div>
-                <div>
-                  <div class="sys-name">Web &amp; Software Engineering</div>
-                  <div class="sys-meta">Full-Stack • API • WCAG 2.1 AA</div>
-                </div>
+          <!-- Bottom Two Mini Bento Cards -->
+          <div class="bento-sub-grid">
+            <div class="bento-sub-card">
+              <div class="bento-sub-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
               </div>
-              <span class="sys-pill">ONLINE</span>
+              <div class="bento-sub-title" data-i18n="bentoSub1Title">Сигурност &amp; Защита</div>
+              <div class="bento-sub-desc" data-i18n="bentoSub1Desc">Zero-Trust мрежи, VPN и автоматизирани архиви</div>
             </div>
 
-            <div class="sys-status-item">
-              <div class="sys-status-left">
-                <div class="sys-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
-                  </svg>
-                </div>
-                <div>
-                  <div class="sys-name">Cloud &amp; Server Cluster</div>
-                  <div class="sys-meta">Linux / Windows • Docker • Backups</div>
-                </div>
+            <div class="bento-sub-card">
+              <div class="bento-sub-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
               </div>
-              <span class="sys-pill">99.98% SLA</span>
-            </div>
-
-            <div class="sys-status-item">
-              <div class="sys-status-left">
-                <div class="sys-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <div class="sys-name">Cybersecurity &amp; Zero-Trust VPN</div>
-                  <div class="sys-meta">Firewall • SIEM • DDoS Shield</div>
-                </div>
-              </div>
-              <span class="sys-pill">PROTECTED</span>
-            </div>
-
-            <div class="sys-status-item">
-              <div class="sys-status-left">
-                <div class="sys-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="20" x2="18" y2="10"></line>
-                    <line x1="12" y1="20" x2="12" y2="4"></line>
-                    <line x1="6" y1="20" x2="6" y2="14"></line>
-                  </svg>
-                </div>
-                <div>
-                  <div class="sys-name">Google Analytics 4 &amp; Telemetry</div>
-                  <div class="sys-meta">Real-Time Event &amp; Link Tracking</div>
-                </div>
-              </div>
-              <span class="sys-pill">ACTIVE</span>
+              <div class="bento-sub-title" data-i18n="bentoSub2Title">Софтуер по поръчка</div>
+              <div class="bento-sub-desc" data-i18n="bentoSub2Desc">Уеб системи, клиентски портали и API интеграции</div>
             </div>
           </div>
         </aside>
