@@ -15,7 +15,7 @@
   const DEFAULT_GA_ID = "G-MMEGA2026X";
 
   const STORAGE_KEYS = {
-    PROJECTS: "mmega_projects_v2",
+    PROJECTS: "mmega_projects_v3",
     LANG: "mmega_lang",
     A11Y: "mmega_a11y_prefs_v2",
     COOKIE_CONSENT: "mmega_cookie_consent",
@@ -356,7 +356,9 @@
 
   function getFilteredProjects() {
     const query = state.searchQuery.trim().toLowerCase();
+    const canSeeInternal = isAuthorizedAdmin();
     return state.projects.filter((proj) => {
+      if (proj.status === "internal" && !canSeeInternal) return false;
       const matchesCat = state.activeFilter === "all" || proj.category === state.activeFilter;
       if (!matchesCat) return false;
       if (!query) return true;

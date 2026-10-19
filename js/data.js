@@ -4,21 +4,6 @@
 
 window.MMEGA_DEFAULT_PROJECTS = [
   {
-    id: "proj-mmega-invoices",
-    titleBg: "Фактури | Микро Мега",
-    titleEn: "Invoices | Micro Mega",
-    url: "https://invoicesnew.mmega.net/dashboard",
-    category: "web",
-    status: "live",
-    featured: true,
-    descriptionBg: "Облачна система за издаване и управление на фактури, клиенти, плащания, артикули и финансови справки в реално време.",
-    descriptionEn: "Cloud-based platform for invoicing, client management, payment ledgers, inventory items, and real-time financial reporting.",
-    tags: ["Next.js", "React", "Firebase", "TypeScript", "Cloud ERP"],
-    accentColor: "#0284c7",
-    imageUrl: "",
-    createdAt: "2026-09-01"
-  },
-  {
     id: "proj-mmega-portal",
     titleBg: "MMEGA Cloud & Monitoring Portal",
     titleEn: "MMEGA Cloud & Monitoring Portal",
@@ -29,7 +14,7 @@ window.MMEGA_DEFAULT_PROJECTS = [
     descriptionBg: "Централизирана платформа за мониторинг на сървърна инфраструктура, облачни услуги и автоматизирани бекъпи в реално време.",
     descriptionEn: "Centralized platform for real-time server infrastructure monitoring, cloud services, and automated backup management.",
     tags: ["Linux", "Docker", "Prometheus", "Grafana", "Cloud"],
-    accentColor: "#2563eb",
+    accentColor: "#393185",
     imageUrl: "",
     createdAt: "2026-01-15"
   },
@@ -129,8 +114,8 @@ window.MMEGA_I18N = {
 
     bentoBadge: "ЕКОСИСТЕМА МИКРО МЕГА",
     bentoMainTitle: "Модерни Бизнес Приложения & Облачна Архитектура",
-    bentoMainDesc: "Интегрирани уеб платформи, електронно фактуриране, ERP решения и надеждна сървърна инфраструктура за вашия бизнес.",
-    bentoInvoicesTitle: "Фактури | Микро Мега",
+    bentoMainDesc: "Интегрирани уеб платформи, корпоративни системи, облачни решения и надеждна сървърна инфраструктура за вашия бизнес.",
+    bentoCtaTitle: "Заяви ИТ Консултация & Одит",
     bentoSub1Title: "Сигурност & Защита",
     bentoSub1Desc: "Zero-Trust мрежи, VPN и автоматизирани архиви",
     bentoSub2Title: "Софтуер по поръчка",
@@ -304,8 +289,8 @@ window.MMEGA_I18N = {
 
     bentoBadge: "MICRO MEGA ECOSYSTEM",
     bentoMainTitle: "Modern Business Applications & Cloud Architecture",
-    bentoMainDesc: "Integrated web platforms, electronic invoicing, ERP solutions, and resilient server infrastructure for your enterprise.",
-    bentoInvoicesTitle: "Invoices | Micro Mega",
+    bentoMainDesc: "Integrated web platforms, enterprise systems, cloud solutions, and resilient server infrastructure for your business.",
+    bentoCtaTitle: "Request IT Consultation & Audit",
     bentoSub1Title: "Security & Protection",
     bentoSub1Desc: "Zero-Trust networks, VPN, and automated backups",
     bentoSub2Title: "Custom Software",

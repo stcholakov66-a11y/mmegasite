@@ -1,20 +1,5 @@
 [
   {
-    "id": "proj-mmega-invoices",
-    "titleBg": "Фактури | Микро Мега",
-    "titleEn": "Invoices | Micro Mega",
-    "url": "https://invoicesnew.mmega.net/dashboard",
-    "category": "web",
-    "status": "live",
-    "featured": true,
-    "descriptionBg": "Облачна система за издаване и управление на фактури, клиенти, плащания, артикули и финансови справки в реално време.",
-    "descriptionEn": "Cloud-based platform for invoicing, client management, payment ledgers, inventory items, and real-time financial reporting.",
-    "tags": ["Next.js", "React", "Firebase", "TypeScript", "Cloud ERP"],
-    "accentColor": "#0284c7",
-    "imageUrl": "",
-    "createdAt": "2026-09-01"
-  },
-  {
     "id": "proj-mmega-portal",
     "titleBg": "MMEGA Cloud & Monitoring Portal",
     "titleEn": "MMEGA Cloud & Monitoring Portal",
@@ -25,7 +10,7 @@
     "descriptionBg": "Централизирана платформа за мониторинг на сървърна инфраструктура, облачни услуги и автоматизирани бекъпи в реално време.",
     "descriptionEn": "Centralized platform for real-time server infrastructure monitoring, cloud services, and automated backup management.",
     "tags": ["Linux", "Docker", "Prometheus", "Grafana", "Cloud"],
-    "accentColor": "#2563eb",
+    "accentColor": "#393185",
     "imageUrl": "",
     "createdAt": "2026-01-15"
   },
@@ -37,8 +22,8 @@
     "category": "web",
     "status": "live",
     "featured": true,
-    "descriptionBg": "Модерно уеб приложение за управление на складови наличности, клиенти, фактуриране и аналитични отчети с висока степен на сигурност.",
-    "descriptionEn": "Modern web application for inventory management, CRM, invoicing, and analytical reporting with enterprise-grade security.",
+    "descriptionBg": "Модерно уеб приложение за управление на складови наличности, клиенти, поръчки и аналитични отчети с висока степен на сигурност.",
+    "descriptionEn": "Modern web application for inventory management, CRM, orders, and analytical reporting with enterprise-grade security.",
     "tags": ["TypeScript", "React", "Node.js", "PostgreSQL", "REST API"],
     "accentColor": "#4f46e5",
     "imageUrl": "",
