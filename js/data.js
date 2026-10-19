@@ -4,6 +4,21 @@
 
 window.MMEGA_DEFAULT_PROJECTS = [
   {
+    id: "proj-mmega-invoices",
+    titleBg: "Фактури | Микро Мега",
+    titleEn: "Invoices | Micro Mega",
+    url: "https://invoicesnew.mmega.net/dashboard",
+    category: "web",
+    status: "live",
+    featured: true,
+    descriptionBg: "Облачна система за издаване и управление на фактури, клиенти, плащания, артикули и финансови справки в реално време.",
+    descriptionEn: "Cloud-based platform for invoicing, client management, payment ledgers, inventory items, and real-time financial reporting.",
+    tags: ["Next.js", "React", "Firebase", "TypeScript", "Cloud ERP"],
+    accentColor: "#0284c7",
+    imageUrl: "",
+    createdAt: "2026-09-01"
+  },
+  {
     id: "proj-mmega-portal",
     titleBg: "MMEGA Cloud & Monitoring Portal",
     titleEn: "MMEGA Cloud & Monitoring Portal",
@@ -14,7 +29,7 @@ window.MMEGA_DEFAULT_PROJECTS = [
     descriptionBg: "Централизирана платформа за мониторинг на сървърна инфраструктура, облачни услуги и автоматизирани бекъпи в реално време.",
     descriptionEn: "Centralized platform for real-time server infrastructure monitoring, cloud services, and automated backup management.",
     tags: ["Linux", "Docker", "Prometheus", "Grafana", "Cloud"],
-    accentColor: "#0284c7",
+    accentColor: "#2563eb",
     imageUrl: "",
     createdAt: "2026-01-15"
   },
@@ -98,7 +113,7 @@ window.MMEGA_I18N = {
     a11yMotion: "Намаляване на анимациите",
     a11yReset: "Нулиране на настройките",
 
-    heroBadge: "Надежден технологичен партньор • www.mmega.net",
+    heroBadge: "Микро Мега ООД • www.mmega.net",
     heroTitle1: "Цялостни ",
     heroTitleAccent: "ИТ Услуги, Облачни Решения",
     heroTitle2: " и Софтуерна Инфраструктура",
@@ -160,7 +175,7 @@ window.MMEGA_I18N = {
     emptyProjectsTitle: "Няма намерени проекти по зададените критерии",
     emptyProjectsSub: "Променете филтъра за търсене или изберете друга категория.",
 
-    whyBadge: "Защо www.mmega.net",
+    whyBadge: "Защо Микро Мега (www.mmega.net)",
     whyTitle: "Технологично превъзходство, сигурност и достъпност",
     whySubtitle: "Всеки наш проект се изгражда със стриктно внимание към производителността, защитата на данните и универсалната достъпност.",
     why1Title: "Сигурност на първо място",
@@ -177,8 +192,8 @@ window.MMEGA_I18N = {
     contactSubtitle: "Изпратете ни запитване за ИТ услуги, поддръжка или разработка на софтуер. Нашият екип ще се свърже с вас възможно най-бързо.",
     contactInfoDomain: "Официален уебсайт",
     contactInfoEmail: "Имейл за връзка",
-    contactInfoHours: "Работно време и SLA",
-    contactInfoHoursVal: "Пон–Пет: 09:00 – 18:00 (24/7 SLA Мониторинг)",
+    contactInfoHours: "Адрес и телефон",
+    contactInfoHoursVal: "гр. София, бул. Янко Сакъзов 15 • +359 88 860 3246",
     formName: "Вашето име или компания *",
     formNamePlaceholder: "Иван Петров / Фирма ООД",
     formEmail: "Имейл адрес *",
@@ -235,7 +250,7 @@ window.MMEGA_I18N = {
     cookieAccept: "Приемам всички",
     cookieDecline: "Само необходими",
 
-    footerRights: "Всички права запазени.",
+    footerRights: "Микро Мега ООД. Всички права запазени.",
     footerA11yNote: "Проектиран според стандартите за достъпност WCAG 2.1 AA.",
     toastProjectSaved: "Проектът беше запазен успешно!",
     toastProjectDeleted: "Проектът беше изтрит.",
@@ -264,7 +279,7 @@ window.MMEGA_I18N = {
     a11yMotion: "Reduce Motion & Animations",
     a11yReset: "Reset Accessibility Settings",
 
-    heroBadge: "Trusted Technology Partner • www.mmega.net",
+    heroBadge: "Micro Mega Ltd • www.mmega.net",
     heroTitle1: "End-to-End ",
     heroTitleAccent: "IT Services, Cloud Solutions",
     heroTitle2: " & Software Infrastructure",
@@ -326,7 +341,7 @@ window.MMEGA_I18N = {
     emptyProjectsTitle: "No projects match your current filter",
     emptyProjectsSub: "Try adjusting your search query or selecting another category.",
 
-    whyBadge: "Why www.mmega.net",
+    whyBadge: "Why Micro Mega (www.mmega.net)",
     whyTitle: "Engineering Excellence, Security & Accessibility",
     whySubtitle: "Every solution we deliver is built with strict attention to performance, data protection, and universal accessibility.",
     why1Title: "Security-First Architecture",
@@ -343,8 +358,8 @@ window.MMEGA_I18N = {
     contactSubtitle: "Send us an inquiry regarding IT support, cloud architecture, or custom web development. Our team will respond promptly.",
     contactInfoDomain: "Official Website",
     contactInfoEmail: "Contact Email",
-    contactInfoHours: "Business Hours & SLA",
-    contactInfoHoursVal: "Mon–Fri: 09:00 – 18:00 (24/7 SLA Monitoring)",
+    contactInfoHours: "Address & Phone",
+    contactInfoHoursVal: "15 Yanko Sakazov Blvd., Sofia • +359 88 860 3246",
     formName: "Your Name or Company *",
     formNamePlaceholder: "John Doe / Acme Corp",
     formEmail: "Email Address *",
@@ -401,7 +416,7 @@ window.MMEGA_I18N = {
     cookieAccept: "Accept All",
     cookieDecline: "Essential Only",
 
-    footerRights: "All rights reserved.",
+    footerRights: "Micro Mega Ltd. All rights reserved.",
     footerA11yNote: "Engineered in compliance with WCAG 2.1 AA accessibility standards.",
     toastProjectSaved: "Project saved successfully!",
     toastProjectDeleted: "Project deleted.",

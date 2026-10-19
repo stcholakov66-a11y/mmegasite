@@ -289,6 +289,14 @@ body {
   flex-shrink: 0;
 }
 
+.brand-logo-img {
+  height: 44px;
+  max-width: 176px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
 .brand-text-wrap {
   display: flex;
   flex-direction: column;
