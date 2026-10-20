@@ -301,14 +301,16 @@
             </p>
 
             <a
-              href="#contact"
+              href="https://propertie.mmega.net"
+              target="_blank"
+              rel="noopener noreferrer"
               class="bento-featured-link"
             >
               <div class="bento-featured-link-left">
                 <img src="assets/favicon.svg" alt="" width="32" height="32" aria-hidden="true" />
                 <div>
-                  <div class="bento-featured-name" data-i18n="bentoCtaTitle">Заяви ИТ Консултация &amp; Одит</div>
-                  <div class="bento-featured-url">www.mmega.net • ИТ Решения</div>
+                  <div class="bento-featured-name" data-i18n="bentoCtaTitle">Prop Manage — Етажна Собственост</div>
+                  <div class="bento-featured-url">propertie.mmega.net</div>
                 </div>
               </div>
               <span class="bento-featured-arrow" aria-hidden="true">→</span>
@@ -471,21 +473,21 @@
       </div>
     </section>
 
-    <!-- 3. PROJECTS & EXISTING LINKS PORTFOLIO SECTION -->
+    <!-- 3. FEATURED PROJECT SECTION (propertie.mmega.net) -->
     <section id="projects" class="section" aria-labelledby="projectsHeading">
       <div class="container">
         <div class="section-header">
-          <div class="section-badge" data-i18n="projectsBadge">Портфолио &amp; Активни системи</div>
+          <div class="section-badge" data-i18n="projectsBadge">Водещ Облачен Продукт • propertie.mmega.net</div>
           <h2 id="projectsHeading" class="section-title" data-i18n="projectsTitle">
-            Нашите проекти и директни връзки
+            Prop Manage — Умното управление на Етажната Собственост
           </h2>
           <p class="section-subtitle" data-i18n="projectsSubtitle">
-            Разгледайте реализираните от нас системи, корпоративни портали, облачни решения и активни уеб проекти.
+            Дигитален е-Домоуправител от ново поколение за автоматизиране на всички изисквания на ЗУЕС — дигитална домова книга, разходооправдателна касова книга, месечни ведомости, индивидуални партиди, технически сигнали и 100% прецизност в Евро (€).
           </p>
         </div>
 
-        <!-- Projects Filter & Search Toolbar (Admin actions hidden from public) -->
-        <div class="projects-toolbar" role="region" aria-label="Филтриране на проекти">
+        <!-- Admin-Only Toolbar (Hidden from public visitors; visible only when stoyan@mmega.net logs in) -->
+        <div class="projects-toolbar" role="region" aria-label="Филтриране на проекти" data-admin-only hidden>
           <div class="search-box">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <circle cx="11" cy="11" r="8"></circle>
@@ -519,8 +521,7 @@
             </button>
           </div>
 
-          <!-- Admin-Only Actions Bar (Only visible when stoyan@mmega.net is authenticated) -->
-          <div class="projects-actions-bar" data-admin-only hidden>
+          <div class="projects-actions-bar">
             <button type="button" class="btn btn-primary" data-open-add-project data-i18n="btnAddProject">
               + Добави проект
             </button>

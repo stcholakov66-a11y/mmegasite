@@ -15,7 +15,7 @@
   const DEFAULT_GA_ID = "G-MMEGA2026X";
 
   const STORAGE_KEYS = {
-    PROJECTS: "mmega_projects_v3",
+    PROJECTS: "mmega_projects_v4",
     LANG: "mmega_lang",
     A11Y: "mmega_a11y_prefs_v2",
     COOKIE_CONSENT: "mmega_cookie_consent",
