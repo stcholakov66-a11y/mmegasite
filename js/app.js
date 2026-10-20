@@ -15,7 +15,7 @@
   const DEFAULT_GA_ID = "G-MMEGA2026X";
 
   const STORAGE_KEYS = {
-    PROJECTS: "mmega_projects_v4",
+    PROJECTS: "mmega_projects_v5",
     LANG: "mmega_lang",
     A11Y: "mmega_a11y_prefs_v2",
     COOKIE_CONSENT: "mmega_cookie_consent",
@@ -420,10 +420,41 @@
             : proj.descriptionBg || proj.descriptionEn;
         const hostname = extractHostname(proj.url);
         const statusInfo = getStatusLabelAndClass(proj.status);
-        const accent = proj.accentColor || "#0284c7";
+        const accent = proj.accentColor || "#393185";
         const tagsHtml = (proj.tags || [])
           .map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`)
           .join("");
+
+        const highlightsList =
+          state.lang === "en"
+            ? proj.highlightsEn || proj.highlightsBg || []
+            : proj.highlightsBg || proj.highlightsEn || [];
+
+        const highlightsHtml =
+          Array.isArray(highlightsList) && highlightsList.length > 0
+            ? `<ul class="project-highlights">
+                ${highlightsList
+                  .map(
+                    (item) => `
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>${escapeHtml(item)}</span>
+                  </li>`
+                  )
+                  .join("")}
+              </ul>`
+            : "";
+
+        const demoBtnHtml = proj.demoUrl
+          ? `<a href="${escapeHtml(proj.demoUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" data-track-project="${escapeHtml(proj.id)}">
+              <span>${escapeHtml(t("demoProject"))}</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </a>`
+          : "";
 
         const imageHtml = proj.imageUrl
           ? `<img src="${escapeHtml(proj.imageUrl)}" alt="${escapeHtml(title)}" class="project-thumb" loading="lazy" />`
@@ -477,6 +508,8 @@
 
                 <p class="project-desc">${escapeHtml(desc)}</p>
 
+                ${highlightsHtml}
+
                 <div class="project-tags" aria-label="Technologies">
                   ${tagsHtml}
                 </div>
@@ -484,14 +517,17 @@
             </div>
 
             <div class="project-card-footer">
-              <a href="${escapeHtml(proj.url)}" target="_blank" rel="noopener noreferrer" class="project-link-btn" data-track-project="${escapeHtml(proj.id)}">
-                <span>${escapeHtml(t("visitProject"))}</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
+              <div class="project-cta-links">
+                <a href="${escapeHtml(proj.url)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-track-project="${escapeHtml(proj.id)}">
+                  <span>${escapeHtml(t("visitProject"))}</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+                ${demoBtnHtml}
+              </div>
               ${adminControlsHtml}
             </div>
           </article>
@@ -961,15 +997,48 @@
       });
     }
 
-    // Cookie Banner Buttons
+    // Cookie Banner Buttons & Reopen Trigger
     const cookieAcceptBtn = document.getElementById("cookieAcceptBtn");
     const cookieDeclineBtn = document.getElementById("cookieDeclineBtn");
+    const openCookieSettingsBtn = document.getElementById("openCookieSettingsBtn");
     if (cookieAcceptBtn) {
       cookieAcceptBtn.addEventListener("click", () => handleCookieConsent(true));
     }
     if (cookieDeclineBtn) {
       cookieDeclineBtn.addEventListener("click", () => handleCookieConsent(false));
     }
+    if (openCookieSettingsBtn) {
+      openCookieSettingsBtn.addEventListener("click", () => {
+        const cookieBanner = document.getElementById("cookieBanner");
+        if (cookieBanner) {
+          cookieBanner.hidden = false;
+        }
+      });
+    }
+
+    // Legal / GDPR / Accessibility Modal
+    const legalModal = document.getElementById("legalModal");
+    document.querySelectorAll("[data-open-legal-modal]").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (legalModal) {
+          legalModal.hidden = false;
+          const sectionId = btn.getAttribute("data-open-legal-modal");
+          if (sectionId) {
+            const targetEl = document.getElementById(sectionId);
+            if (targetEl) {
+              setTimeout(() => targetEl.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
+            }
+          }
+        }
+      });
+    });
+
+    document.querySelectorAll("[data-close-legal-modal]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (legalModal) legalModal.hidden = true;
+      });
+    });
 
     // Keyboard Shortcuts (Escape to close modals, Ctrl+Shift+A for Admin Login)
     document.addEventListener("keydown", (e) => {
@@ -977,6 +1046,7 @@
         closeProjectModal();
         closeAdminLoginModal();
         if (dataModal) dataModal.hidden = true;
+        if (legalModal) legalModal.hidden = true;
         if (a11yPanel) {
           a11yPanel.hidden = true;
           if (a11yMenuBtn) a11yMenuBtn.setAttribute("aria-expanded", "false");

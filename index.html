@@ -27,22 +27,83 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/styles.css" />
 
-  <!-- Structured Data (JSON-LD) for www.mmega.net -->
+  <!-- Structured Data (JSON-LD) for www.mmega.net & Prop Manage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ITService",
-    "name": "MMEGA.NET",
-    "url": "https://www.mmega.net",
-    "description": "Цялостни ИТ услуги, уеб разработка, системна администрация, облачни решения и киберсигурност.",
-    "email": "stoyan@mmega.net",
-    "knowsAbout": [
-      "Web Development",
-      "Custom Software Development",
-      "System Administration",
-      "Cloud Infrastructure & DevOps",
-      "Cybersecurity & Network Engineering",
-      "IT Consulting"
+    "@graph": [
+      {
+        "@type": "ITService",
+        "@id": "https://www.mmega.net/#organization",
+        "name": "Микро Мега ООД (Micro Mega Ltd)",
+        "legalName": "Микро Мега ООД",
+        "url": "https://www.mmega.net",
+        "logo": "https://www.mmega.net/assets/logo.png",
+        "description": "Цялостни ИТ услуги, уеб разработка, облачни SaaS платформи (Prop Manage — propertie.mmega.net), системна администрация и киберсигурност.",
+        "email": "stoyan@mmega.net",
+        "telephone": "+359888603246",
+        "taxID": "831345504",
+        "vatID": "BG831345504",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "бул. Янко Сакъзов № 15",
+          "addressLocality": "София",
+          "addressCountry": "BG"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Стоян Чолаков"
+        },
+        "knowsAbout": [
+          "Web Development",
+          "Custom Software Development",
+          "Condominium & Property Management SaaS (ZUES)",
+          "System Administration",
+          "Cloud Infrastructure & DevOps",
+          "Cybersecurity & Network Engineering",
+          "IT Consulting"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Prop Manage — Управление на Етажната Собственост",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, Cloud SaaS",
+        "url": "https://propertie.mmega.net",
+        "description": "Модерна облачна SaaS платформа (Дигитален е-Домоуправител) за управление на етажна собственост според ЗУЕС с пълна прецизност в Евро (€).",
+        "publisher": {
+          "@id": "https://www.mmega.net/#organization"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Отговаря ли платформата Prop Manage (propertie.mmega.net) на последните изменения в ЗУЕС?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да. Prop Manage е проектирана в пълно съответствие със Закона за управление на етажната собственост (ЗУЕС) — включва електронна Домова книга по чл. 7, разходооправдателна касова книга, автоматично разделяне на Фонд Ремонт и обновяване от текущите разходи и МРРБ уизърд за регистрация на входа."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Поддържа ли софтуерът работа в Евро (€) и двойно обозначаване на сумите?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да. Всички финансови отчети, месечни ведомости, касови книги и индивидуални партиди на апартаменти в propertie.mmega.net работят с пълна прецизност в Евро (€) и автоматично двойно обозначаване по официалния фиксиран курс."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Как се гарантира сигурността на данните и съответствието с GDPR?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Микро Мега ООД прилага криптирана връзка (TLS 1.3), ролеви контрол на достъпа (RBAC), изолирани бази данни в ЕС и ежедневни автоматизирани архиви в съответствие с Регламент (ЕС) 2016/679 (GDPR)."
+            }
+          }
+        ]
+      }
     ]
   }
   </script>
@@ -98,8 +159,9 @@
       <nav id="mainNav" class="main-nav" aria-label="Основна навигация">
         <ul>
           <li><a href="#services" class="nav-link" data-i18n="navServices">ИТ Услуги</a></li>
-          <li><a href="#projects" class="nav-link" data-i18n="navProjects">Проекти &amp; Линкове</a></li>
+          <li><a href="#projects" class="nav-link" data-i18n="navProjects">Prop Manage</a></li>
           <li><a href="#about" class="nav-link" data-i18n="navAbout">За нас</a></li>
+          <li><a href="#faq" class="nav-link" data-i18n="navFaq">Въпроси (FAQ)</a></li>
           <li><a href="#contact" class="nav-link" data-i18n="navContact">Контакти</a></li>
         </ul>
       </nav>
@@ -578,18 +640,71 @@
           </div>
 
           <div class="why-card">
-            <span class="why-number">04 / ANALYTICS</span>
-            <h3 data-i18n="why4Title">Мониторинг и анализи</h3>
+            <span class="why-number">04 / COMPLIANCE</span>
+            <h3 data-i18n="why4Title">Мониторинг и съответствие</h3>
             <p data-i18n="why4Desc">
-              Вградена интеграция с Google Analytics 4 (GA4) и централизиран контрол върху проектите.
+              Пълно съответствие със ЗУЕС, ЗЕТ, GDPR и Европейския акт за достъпност (EAA), с вграден GA4 Consent Mode v2.
             </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- 4.5 FAQ SECTION (ЗЕТ, ЗУЕС, Евро & Киберсигурност) -->
+    <section id="faq" class="section" aria-labelledby="faqHeading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="faqBadge">Често задавани въпроси (FAQ)</div>
+          <h2 id="faqHeading" class="section-title" data-i18n="faqTitle">
+            Въпроси относно ИТ услугите ни и Prop Manage
+          </h2>
+          <p class="section-subtitle" data-i18n="faqSubtitle">
+            Отговори на най-важните въпроси за корпоративната поддръжка на „Микро Мега“ ООД и облачната платформа propertie.mmega.net.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary class="faq-question" data-i18n="faqQ1">
+              Отговаря ли платформата Prop Manage (propertie.mmega.net) на последните изменения в ЗУЕС?
+            </summary>
+            <div class="faq-answer" data-i18n="faqA1">
+              Да. Prop Manage е проектирана в пълно съответствие със Закона за управление на етажната собственост (ЗУЕС) — включва електронна Домова книга по чл. 7, разходооправдателна касова книга, автоматично разделяне на Фонд „Ремонт и обновяване“ от текущите разходи за управление и поддръжка, както и МРРБ уизърд за регистрация на входа.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question" data-i18n="faqQ2">
+              Поддържа ли софтуерът работа в Евро (€) и двойно обозначаване на сумите?
+            </summary>
+            <div class="faq-answer" data-i18n="faqA2">
+              Да. Всички финансови отчети, месечни ведомости, касови книги и индивидуални партиди на апартаменти в propertie.mmega.net работят с пълна прецизност в Евро (€) и автоматично двойно обозначаване по официалния фиксиран курс.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question" data-i18n="faqQ3">
+              Как се гарантира сигурността на данните и съответствието с GDPR?
+            </summary>
+            <div class="faq-answer" data-i18n="faqA3">
+              „Микро Мега“ ООД прилага строги политики за информационна сигурност: криптирана връзка (TLS 1.3), ролеви контрол на достъпа (RBAC), изолирани бази данни в ЕС и ежедневни автоматизирани архиви. Личните данни на етажните собственици се обработват единствено за целите на управлението по ЗУЕС.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question" data-i18n="faqQ4">
+              Какви корпоративни ИТ услуги и SLA поддръжка предлага „Микро Мега“ ООД?
+            </summary>
+            <div class="faq-answer" data-i18n="faqA4">
+              Предлагаме абонаментна системна администрация (Linux/Windows сървъри, Proxmox, VMware), облачна инфраструктура и DevOps, мрежова сигурност (Zero-Trust VPN, Firewalls), както и разработка на уеб приложения и корпоративни портали по поръчка с гарантиран SLA до 99.9%.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- 5. CONTACT SECTION -->
-    <section id="contact" class="section" aria-labelledby="contactHeading">
+    <section id="contact" class="section section-alt" aria-labelledby="contactHeading">
       <div class="container contact-grid">
         <div>
           <div class="section-badge" data-i18n="contactBadge">Свържете се с нас</div>
@@ -694,6 +809,15 @@
               ></textarea>
             </div>
 
+            <div class="form-group">
+              <label class="checkbox-row" style="align-items:flex-start;">
+                <input type="checkbox" id="contactGdprConsent" required style="margin-top:3px; flex-shrink:0;" />
+                <span style="font-size:0.83rem; color:var(--text-secondary); line-height:1.45;" data-i18n="formGdprConsent">
+                  Съгласен/на съм предоставените от мен данни да бъдат обработвани от „Микро Мега“ ООД единствено за целите на отговор по настоящото запитване, съгласно Политиката за поверителност (GDPR). *
+                </span>
+              </label>
+            </div>
+
             <button type="submit" class="btn btn-primary" style="width:100%;" data-i18n="formSubmit">
               Изпрати запитване
             </button>
@@ -704,7 +828,7 @@
   </main>
 
   <!-- ========================================================================
-       FOOTER
+       FOOTER (ЗЕТ чл. 4, GDPR, EAA / WCAG 2.1 AA Compliance)
        ======================================================================== -->
   <footer class="site-footer" role="contentinfo">
     <div class="container">
@@ -724,21 +848,40 @@
 
         <div style="display:flex; gap:16px; flex-wrap:wrap;">
           <a href="#services" class="nav-link" data-i18n="navServices">ИТ Услуги</a>
-          <a href="#projects" class="nav-link" data-i18n="navProjects">Проекти &amp; Линкове</a>
+          <a href="#projects" class="nav-link" data-i18n="navProjects">Prop Manage</a>
           <a href="#about" class="nav-link" data-i18n="navAbout">За нас</a>
+          <a href="#faq" class="nav-link" data-i18n="navFaq">Въпроси (FAQ)</a>
           <a href="#contact" class="nav-link" data-i18n="navContact">Контакти</a>
+        </div>
+      </div>
+
+      <!-- Mandatory E-Commerce Act (ЗЕТ чл. 4) & GDPR / EAA Links -->
+      <div class="footer-legal-bar">
+        <div data-i18n="footerCompanyLegal">
+          „Микро Мега“ ООД • ЕИК: 831345504 • ДДС №: BG831345504 • Седалище: гр. София, бул. „Янко Сакъзов“ № 15 • МОЛ: Стоян Чолаков
+        </div>
+        <div class="footer-compliance-links">
+          <button type="button" class="footer-link-btn" data-open-legal-modal="legalSectionZet" data-i18n="footerLegalBtn">
+            Правна информация &amp; GDPR
+          </button>
+          <button type="button" class="footer-link-btn" data-open-legal-modal="legalSectionA11y" data-i18n="footerA11yStatementBtn">
+            Декларация за достъпност (EAA)
+          </button>
+          <button type="button" id="openCookieSettingsBtn" class="footer-link-btn" data-i18n="footerCookieSettingsBtn">
+            Настройки на бисквитките
+          </button>
         </div>
       </div>
 
       <div class="footer-bottom">
         <div>
           &copy; <span id="currentYear">2026</span> <strong>www.mmega.net</strong>.
-          <span data-i18n="footerRights">Всички права запазени.</span>
+          <span data-i18n="footerRights">„Микро Мега“ ООД. Всички права запазени.</span>
         </div>
 
         <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
           <span data-i18n="footerA11yNote">
-            Проектиран според стандартите за достъпност WCAG 2.1 AA.
+            Проектиран според стандартите за достъпност WCAG 2.1 AA и Европейския акт за достъпност.
           </span>
           <!-- Discreet Admin Login Trigger for stoyan@mmega.net -->
           <button type="button" id="footerAdminLoginBtn" class="admin-footer-trigger" aria-label="Администраторски вход за stoyan@mmega.net">
@@ -752,6 +895,73 @@
       </div>
     </div>
   </footer>
+
+  <!-- ========================================================================
+       MODAL: LEGAL NOTICE, PRIVACY POLICY (GDPR) & ACCESSIBILITY STATEMENT (EAA)
+       ======================================================================== -->
+  <div
+    id="legalModal"
+    class="modal-backdrop"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="legalModalTitle"
+    hidden
+  >
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2 id="legalModalTitle" class="modal-title" data-i18n="legalModalTitle">
+          Правна информация, Поверителност (GDPR) и Достъпност
+        </h2>
+        <button type="button" class="modal-close-btn" data-close-legal-modal aria-label="Затвори">✕</button>
+      </div>
+
+      <div class="legal-modal-body">
+        <div id="legalSectionZet" class="legal-section-block">
+          <h3>1. Данни за доставчика на услуги по чл. 4 от ЗЕТ</h3>
+          <p>
+            Уебсайтът <strong>https://www.mmega.net</strong> и облачната платформа за етажна собственост <strong>https://propertie.mmega.net</strong> се управляват от:
+          </p>
+          <ul>
+            <li><strong>Наименование:</strong> „Микро Мега“ ООД (Micro Mega Ltd)</li>
+            <li><strong>ЕИК (Търговски регистър към АВ):</strong> 831345504</li>
+            <li><strong>Регистрация по ЗДДС:</strong> BG831345504</li>
+            <li><strong>Седалище и адрес на управление:</strong> Република България, гр. София, бул. „Янко Сакъзов“ № 15</li>
+            <li><strong>Материално отговорно лице (Управител):</strong> Стоян Чолаков</li>
+            <li><strong>Електронна поща и телефон за контакт:</strong> <a href="mailto:stoyan@mmega.net">stoyan@mmega.net</a> | +359 88 860 3246</li>
+            <li><strong>Надзорни органи:</strong> Комисия за защита на потребителите (КЗП — <a href="https://kzp.bg" target="_blank" rel="noopener noreferrer">kzp.bg</a>) и Комисия за защита на личните данни (КЗЛД — <a href="https://cpdp.bg" target="_blank" rel="noopener noreferrer">cpdp.bg</a>).</li>
+          </ul>
+        </div>
+
+        <div id="legalSectionGdpr" class="legal-section-block">
+          <h3>2. Политика за поверителност (GDPR) и Бисквитки (Cookies)</h3>
+          <p>
+            „Микро Мега“ ООД обработва лични данни в стриктно съответствие с Регламент (ЕС) 2016/679 (Общ регламент относно защитата на данните — GDPR) и Закона за защита на личните данни (ЗЗЛД).
+          </p>
+          <ul>
+            <li><strong>Какви данни събираме на www.mmega.net:</strong> Когато изпращате запитване чрез контактната форма, обработваме единствено посочените от вас име/компания, имейл адрес и съдържание на запитването на основание чл. 6, ал. 1, б. „а“ и „б“ от GDPR (преддоговорни отношения и изрично съгласие).</li>
+            <li><strong>Локално съхранение (localStorage):</strong> Сайтът запазва локално във вашия браузър избрания от вас език (БГ/EN), настройките за достъпност (WCAG 2.1) и статуса на съгласие за бисквитки. Тези данни са строго функционални и не се споделят с трети страни.</li>
+            <li><strong>Google Analytics 4 (Consent Mode v2):</strong> Аналитичните бисквитки се активират единствено след вашето изрично натискане на бутона „Приемам всички“ в банера за бисквитки (с активирана IP анонимизация). Можете да промените избора си по всяко време чрез линка „Настройки на бисквитките“ във футъра.</li>
+            <li><strong>Права на субектите на данни:</strong> Имате право на достъп, коригиране, изтриване („право да бъдеш забравен“) и ограничаване на обработването чрез заявка на <a href="mailto:stoyan@mmega.net">stoyan@mmega.net</a>.</li>
+          </ul>
+        </div>
+
+        <div id="legalSectionA11y" class="legal-section-block">
+          <h3>3. Декларация за достъпност (WCAG 2.1 AA &amp; Европейски акт за достъпност — EAA)</h3>
+          <p>
+            „Микро Мега“ ООД се ангажира да осигури пълна цифрова достъпност за хора с увреждания в съответствие с Директива (ЕС) 2019/882 (Европейски акт за достъпност), стандарт <strong>EN 301 549</strong> и указанията <strong>WCAG 2.1 ниво AA</strong>.
+          </p>
+          <ul>
+            <li><strong>Вградени функции за достъпност:</strong> Сайтът разполага със специализиран панел за достъпност в горната лента (режим с висок контраст, тъмна тема, увеличен шрифт, разширено разстояние между текста и изключване на анимациите), пълна клавиатурна навигация (Tab / Shift+Tab / Escape / Skip-to-content) и семантични ARIA атрибути за екранни четци.</li>
+            <li><strong>Обратна връзка за достъпност:</strong> Ако срещнете затруднение при ползването на www.mmega.net или propertie.mmega.net, моля свържете се с нас на <a href="mailto:stoyan@mmega.net">stoyan@mmega.net</a>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-close-legal-modal data-i18n="legalCloseBtn">Затвори</button>
+      </div>
+    </div>
+  </div>
 
   <!-- ========================================================================
        MODAL 0: ADMIN LOGIN (Strictly for stoyan@mmega.net)

@@ -4,12 +4,29 @@
     "titleBg": "Prop Manage — Управление на Етажната Собственост",
     "titleEn": "Prop Manage — Condominium & Property Management SaaS",
     "url": "https://propertie.mmega.net",
+    "demoUrl": "https://propertie.mmega.net/demo",
     "category": "web",
     "status": "live",
     "featured": true,
     "descriptionBg": "Модерна облачна SaaS платформа (Дигитален е-Домоуправител) за управление на етажна собственост според ЗУЕС — дигитална домова книга, разходооправдателна касова книга, месечни ведомости, индивидуални партиди на апартаменти, технически сигнали и МРРБ уизърд с пълна прецизност в Евро (€).",
     "descriptionEn": "Next-generation cloud SaaS platform (Digital Condominium Manager) automating Condominium Ownership Law (ZUES) compliance — digital household register, cash ledger, monthly statements, apartment accounts, maintenance tickets, and municipal registration wizard with full Euro (€) precision.",
-    "tags": ["Next.js 16", "React 19", "Tailwind CSS v4", "Firebase", "SaaS", "ЗУЕС"],
+    "highlightsBg": [
+      "Дигитална Домова книга по ЗУЕС (чл. 7) и регистър на собственици и обитатели",
+      "Разходооправдателна Касова книга, Фонд „Ремонт и обновяване“ и месечни ведомости",
+      "Индивидуални партиди на апартаменти, онлайн справки и прозрачни отчети за входа",
+      "Система за технически сигнали, аварии и проследяване на ремонти в реално време",
+      "МРРБ Уизърд за общинска регистрация и автоматизирани протоколи от Общи събрания",
+      "100% прецизност в Евро (€) и автоматично двойно обозначаване (EUR / BGN)"
+    ],
+    "highlightsEn": [
+      "Digital Household Register compliant with Bulgarian Condominium Law (ZUES Art. 7)",
+      "Automated Cash Ledger, Repair & Renovation Fund, and monthly billing statements",
+      "Individual apartment accounts, resident self-service portal, and transparent reporting",
+      "Real-time maintenance tickets, issue tracking, and contractor management",
+      "Municipal Registration (MRRB) Wizard and automated General Assembly minutes",
+      "100% Euro (€) financial precision with dual EUR / BGN display compliance"
+    ],
+    "tags": ["Next.js 16", "React 19", "Tailwind CSS v4", "Firebase", "SaaS", "ЗУЕС", "EUR (€)"],
     "accentColor": "#393185",
     "imageUrl": "",
     "createdAt": "2026-09-15"
