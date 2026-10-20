@@ -12,14 +12,14 @@
 
   const AUTHORIZED_ADMIN_EMAIL = "stoyan@mmega.net";
   const DEFAULT_ADMIN_PASS = "mmega2026";
-  const DEFAULT_GA_ID = "G-MMEGA2026X";
+  const DEFAULT_GA_ID = "G-E19YF9BEGG";
 
   const STORAGE_KEYS = {
     PROJECTS: "mmega_projects_v5",
     LANG: "mmega_lang",
     A11Y: "mmega_a11y_prefs_v2",
     COOKIE_CONSENT: "mmega_cookie_consent",
-    GA_ID: "mmega_ga_measurement_id",
+    GA_ID: "mmega_ga_measurement_id_v2",
     ADMIN_SESSION: "mmega_admin_session_email",
     ADMIN_PASS: "mmega_admin_pass_v1"
   };
@@ -80,6 +80,9 @@
   function loadGtagScript(measurementId) {
     if (!measurementId || !measurementId.startsWith("G-")) return;
     const existing = document.getElementById("ga4-gtag-script");
+    if (existing && existing.src && existing.src.includes(encodeURIComponent(measurementId))) {
+      return;
+    }
     if (existing) existing.remove();
 
     const script = document.createElement("script");
