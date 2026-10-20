@@ -115,6 +115,14 @@ window.MMEGA_I18N = {
     ninjaPill3: "Дистанционна поддръжка в реално време",
     ninjaPill4: "Проактивна превенция на инциденти",
 
+    withsecureBadge: "PROTECTED BY WITHSECURE™ ELEMENTS • NEXT-GEN EDR",
+    withsecureTitle: "Максимална киберсигурност с WithSecure™ Elements",
+    withsecureDesc: "Сигурността на вашите компютри, сървъри и данни е наш основен приоритет. Затова ние защитаваме и менажираме вашата ИТ инфраструктура с WithSecure™ (наследник на корпоративното портфолио на F-Secure). Чрез облачната платформа WithSecure Elements осигуряваме пълна защита от следващо поколение: от засичане и реакция на напреднали киберзаплахи (EDR) и автоматизирано обновяване на софтуера (Patch Management), до сканиране за уязвимости. Използваме технологии, доказани на световно ниво, за да гарантираме, че бизнесът ви е защитен 24/7.",
+    withsecurePill1: "Засичане и реакция на киберзаплахи (EDR)",
+    withsecurePill2: "Сканиране за уязвимости",
+    withsecurePill3: "Автоматизиран Patch Management",
+    withsecurePill4: "24/7 Облачна защита (WithSecure™ / F-Secure)",
+
     projectsBadge: "Водещ Облачен Продукт • propertie.mmega.net",
     projectsTitle: "Prop Manage — Умното управление на Етажната Собственост",
     projectsSubtitle: "Дигитален е-Домоуправител от ново поколение за автоматизиране на всички изисквания на ЗУЕС — дигитална домова книга, разходооправдателна касова книга, месечни ведомости, индивидуални партиди, технически сигнали и 100% прецизност в Евро (€).",
@@ -161,6 +169,8 @@ window.MMEGA_I18N = {
     faqA4: "Предлагаме абонаментна системна администрация (Linux/Windows сървъри, Proxmox, VMware), облачна инфраструктура и DevOps, мрежова сигурност (Zero-Trust VPN, Firewalls), както и разработка на уеб приложения и корпоративни портали по поръчка с гарантиран SLA до 99.9%.",
     faqQ5: "Как управляваме вашата ИТ инфраструктура?",
     faqA5: "За да гарантираме максимална стабилност и сигурност на вашите компютри и сървъри, ние използваме NinjaOne – световен лидер в унифицираното управление на ИТ системи. Чрез тази платформа нашият екип извършва денонощен мониторинг, автоматизирано обновяване на софтуера (patch management) и дистанционна поддръжка в реално време. Това ни позволява да отстраняваме ИТ проблеми, преди те да са повлияли на вашия бизнес.",
+    faqQ6: "Максимална киберсигурност с WithSecure™ Elements — как защитаваме вашите системи?",
+    faqA6: "Сигурността на вашите компютри, сървъри и данни е наш основен приоритет. Затова ние защитаваме и менажираме вашата ИТ инфраструктура с WithSecure™ (наследник на корпоративното портфолио на F-Secure). Чрез облачната платформа WithSecure Elements осигуряваме пълна защита от следващо поколение: от засичане и реакция на напреднали киберзаплахи (EDR) и автоматизирано обновяване на софтуера (Patch Management), до сканиране за уязвимости. Използваме технологии, доказани на световно ниво, за да гарантираме, че бизнесът ви е защитен 24/7.",
 
     contactBadge: "Свържете се с нас",
     contactTitle: "Готови ли сте да стартираме следващия ви ИТ проект?",
@@ -323,6 +333,14 @@ window.MMEGA_I18N = {
     ninjaPill3: "Real-Time Remote Support",
     ninjaPill4: "Proactive Incident Prevention",
 
+    withsecureBadge: "PROTECTED BY WITHSECURE™ ELEMENTS • NEXT-GEN EDR",
+    withsecureTitle: "Maximum Cybersecurity with WithSecure™ Elements",
+    withsecureDesc: "The security of your workstations, servers, and data is our top priority. That is why we protect and manage your IT infrastructure with WithSecure™ (the corporate cybersecurity successor to F-Secure). Through the WithSecure Elements cloud platform, we deliver complete next-generation protection: from Endpoint Detection and Response (EDR) and automated software updates (Patch Management) to continuous vulnerability scanning. We rely on globally proven technologies to ensure your business stays protected 24/7.",
+    withsecurePill1: "Endpoint Detection & Response (EDR)",
+    withsecurePill2: "Vulnerability Scanning",
+    withsecurePill3: "Automated Patch Management",
+    withsecurePill4: "24/7 Cloud Protection (WithSecure™ / F-Secure)",
+
     projectsBadge: "Flagship Cloud Product • propertie.mmega.net",
     projectsTitle: "Prop Manage — Smart Condominium & Property Management",
     projectsSubtitle: "Next-generation digital condominium manager automating ZUES compliance — digital household register, cash ledger, monthly statements, apartment accounts, maintenance tickets, and 100% Euro (€) precision.",
@@ -369,6 +387,8 @@ window.MMEGA_I18N = {
     faqA4: "We provide managed system administration (Linux/Windows servers, Proxmox, VMware), cloud infrastructure and DevOps, network security (Zero-Trust VPN, Next-Gen Firewalls), and custom web software development backed by up to 99.9% SLA uptime.",
     faqQ5: "How do we manage your IT infrastructure?",
     faqA5: "To guarantee maximum stability and security for your workstations and servers, we utilize NinjaOne — a global leader in unified IT systems management. Through this platform, our team performs 24/7 monitoring, automated software updates (patch management), and real-time remote support. This allows us to resolve IT issues before they impact your business.",
+    faqQ6: "Maximum Cybersecurity with WithSecure™ Elements — how do we protect your systems?",
+    faqA6: "The security of your workstations, servers, and data is our top priority. That is why we protect and manage your IT infrastructure with WithSecure™ (successor to F-Secure's corporate portfolio). Through the WithSecure Elements cloud platform, we provide next-generation protection: from Endpoint Detection and Response (EDR) and automated Patch Management to vulnerability scanning, keeping your business protected 24/7.",
 
     contactBadge: "Get in Touch",
     contactTitle: "Ready to Launch or Upgrade Your IT Infrastructure?",

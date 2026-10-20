@@ -934,9 +934,15 @@ html[data-theme="dark"] .bento-sub-icon {
   margin-top: 3px;
 }
 
-/* NinjaOne Unified IT Infrastructure Highlight Banner */
-.ninja-infra-banner {
+/* NinjaOne & WithSecure Unified IT Infrastructure Highlight Grid */
+.enterprise-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
   margin-top: 28px;
+}
+
+.ninja-infra-banner {
   background: var(--bg-surface);
   border: 1px solid var(--border-strong);
   border-left: 5px solid var(--accent-primary);
@@ -945,7 +951,14 @@ html[data-theme="dark"] .bento-sub-icon {
   box-shadow: var(--shadow-md);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 16px;
+}
+
+@media (max-width: 1024px) {
+  .enterprise-stack-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .ninja-infra-top {
