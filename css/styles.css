@@ -934,6 +934,82 @@ html[data-theme="dark"] .bento-sub-icon {
   margin-top: 3px;
 }
 
+/* NinjaOne Unified IT Infrastructure Highlight Banner */
+.ninja-infra-banner {
+  margin-top: 28px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-left: 5px solid var(--accent-primary);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ninja-infra-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ninja-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--accent-primary);
+  background: rgba(57, 49, 133, 0.09);
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+}
+
+.ninja-infra-title {
+  font-size: 1.38rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.ninja-infra-desc {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  line-height: 1.68;
+}
+
+.ninja-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 8px;
+}
+
+.ninja-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+}
+
+.ninja-pill svg {
+  width: 15px;
+  height: 15px;
+  color: var(--success);
+  flex-shrink: 0;
+}
+
 /* ==========================================================================
    PROJECTS & LINKS PORTFOLIO SECTION
    ========================================================================== */

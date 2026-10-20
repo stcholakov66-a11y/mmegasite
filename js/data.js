@@ -107,6 +107,14 @@ window.MMEGA_I18N = {
     srv4Item2: "Автоматизация на бизнес процеси и внедряване на облачни платформи",
     srv4Item3: "Обучение на екипи и консултации по информационна сигурност и GDPR",
 
+    ninjaBadge: "POWERED BY NINJAONE • UNIFIED IT MANAGEMENT",
+    ninjaTitle: "Как управляваме вашата ИТ инфраструктура?",
+    ninjaDesc: "За да гарантираме максимална стабилност и сигурност на вашите компютри и сървъри, ние използваме NinjaOne – световен лидер в унифицираното управление на ИТ системи. Чрез тази платформа нашият екип извършва денонощен мониторинг, автоматизирано обновяване на софтуера (patch management) и дистанционна поддръжка в реално време. Това ни позволява да отстраняваме ИТ проблеми, преди те да са повлияли на вашия бизнес.",
+    ninjaPill1: "24/7 Денонощен мониторинг",
+    ninjaPill2: "Автоматизиран Patch Management",
+    ninjaPill3: "Дистанционна поддръжка в реално време",
+    ninjaPill4: "Проактивна превенция на инциденти",
+
     projectsBadge: "Водещ Облачен Продукт • propertie.mmega.net",
     projectsTitle: "Prop Manage — Умното управление на Етажната Собственост",
     projectsSubtitle: "Дигитален е-Домоуправител от ново поколение за автоматизиране на всички изисквания на ЗУЕС — дигитална домова книга, разходооправдателна касова книга, месечни ведомости, индивидуални партиди, технически сигнали и 100% прецизност в Евро (€).",
@@ -151,6 +159,8 @@ window.MMEGA_I18N = {
     faqA3: "„Микро Мега“ ООД прилага строги политики за информационна сигурност: криптирана връзка (TLS 1.3), ролеви контрол на достъпа (RBAC), изолирани бази данни в ЕС и ежедневни автоматизирани архиви. Личните данни на етажните собственици се обработват единствено за целите на управлението по ЗУЕС.",
     faqQ4: "Какви корпоративни ИТ услуги и SLA поддръжка предлага „Микро Мега“ ООД?",
     faqA4: "Предлагаме абонаментна системна администрация (Linux/Windows сървъри, Proxmox, VMware), облачна инфраструктура и DevOps, мрежова сигурност (Zero-Trust VPN, Firewalls), както и разработка на уеб приложения и корпоративни портали по поръчка с гарантиран SLA до 99.9%.",
+    faqQ5: "Как управляваме вашата ИТ инфраструктура?",
+    faqA5: "За да гарантираме максимална стабилност и сигурност на вашите компютри и сървъри, ние използваме NinjaOne – световен лидер в унифицираното управление на ИТ системи. Чрез тази платформа нашият екип извършва денонощен мониторинг, автоматизирано обновяване на софтуера (patch management) и дистанционна поддръжка в реално време. Това ни позволява да отстраняваме ИТ проблеми, преди те да са повлияли на вашия бизнес.",
 
     contactBadge: "Свържете се с нас",
     contactTitle: "Готови ли сте да стартираме следващия ви ИТ проект?",
@@ -305,6 +315,14 @@ window.MMEGA_I18N = {
     srv4Item2: "Business workflow automation and cloud platform adoption",
     srv4Item3: "Team training, cybersecurity awareness, and GDPR compliance consulting",
 
+    ninjaBadge: "POWERED BY NINJAONE • UNIFIED IT MANAGEMENT",
+    ninjaTitle: "How Do We Manage Your IT Infrastructure?",
+    ninjaDesc: "To guarantee maximum stability and security for your workstations and servers, we utilize NinjaOne — a global leader in unified endpoint and IT systems management. Through this platform, our team performs 24/7 monitoring, automated software updates (patch management), and real-time remote support. This enables us to resolve IT issues proactively before they impact your business.",
+    ninjaPill1: "24/7 Proactive Monitoring",
+    ninjaPill2: "Automated Patch Management",
+    ninjaPill3: "Real-Time Remote Support",
+    ninjaPill4: "Proactive Incident Prevention",
+
     projectsBadge: "Flagship Cloud Product • propertie.mmega.net",
     projectsTitle: "Prop Manage — Smart Condominium & Property Management",
     projectsSubtitle: "Next-generation digital condominium manager automating ZUES compliance — digital household register, cash ledger, monthly statements, apartment accounts, maintenance tickets, and 100% Euro (€) precision.",
@@ -349,6 +367,8 @@ window.MMEGA_I18N = {
     faqA3: "Micro Mega Ltd enforces strict security standards: TLS 1.3 encryption in transit, Role-Based Access Control (RBAC), isolated EU cloud databases, and automated daily backups. Personal data of condominium residents is processed strictly for legitimate ZUES property management purposes.",
     faqQ4: "What corporate IT services and SLA support does Micro Mega Ltd provide?",
     faqA4: "We provide managed system administration (Linux/Windows servers, Proxmox, VMware), cloud infrastructure and DevOps, network security (Zero-Trust VPN, Next-Gen Firewalls), and custom web software development backed by up to 99.9% SLA uptime.",
+    faqQ5: "How do we manage your IT infrastructure?",
+    faqA5: "To guarantee maximum stability and security for your workstations and servers, we utilize NinjaOne — a global leader in unified IT systems management. Through this platform, our team performs 24/7 monitoring, automated software updates (patch management), and real-time remote support. This allows us to resolve IT issues before they impact your business.",
 
     contactBadge: "Get in Touch",
     contactTitle: "Ready to Launch or Upgrade Your IT Infrastructure?",
